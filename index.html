@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Scratch Webmapping</title>
+        <title>Scratch Webmapping-leaflet</title>
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
         crossorigin=""/>
@@ -25,6 +25,35 @@
             });
             // add background layer to map
             map.addLayer(backgroundLayer)
+
+            // 4-2-3 add pin 
+            // step by step
+            const marker = L.marker([33,129.25]);
+            marker.bindPopup('Japan Plane Rectangular 1')
+            map.addLayer(marker)
+
+            // one line to other ones
+            L.marker([33,131.0]).bindPopup('Japan Plane Rectangular 2').addTo(map)
+            L.marker([36,132.666666666]).bindPopup('Japan Plane Rectangular 3').addTo(map)
+            L.marker([33,133.5]).bindPopup('Japan Plane Rectangular 4').addTo(map)
+            L.marker([36,134.33333333]).bindPopup('Japan Plane Rectangular 5').addTo(map)
+            L.marker([36,136.0]).bindPopup('Japan Plane Rectangular 6').addTo(map)
+            L.marker([36,137.166666666]).bindPopup('Japan Plane Rectangular 7').addTo(map)
+            L.marker([36,138.5]).bindPopup('Japan Plane Rectangular 8').addTo(map)
+            L.marker([36,139.833333333]).bindPopup('Japan Plane Rectangular 9').addTo(map)
+            L.marker([40,140.833333333]).bindPopup('Japan Plane Rectangular 10').addTo(map)
+            L.marker([44,140.25]).bindPopup('Japan Plane Rectangular 11').addTo(map)
+            L.marker([44,142.25]).bindPopup('Japan Plane Rectangular 12').addTo(map)
+            L.marker([44,144.25]).bindPopup('Japan Plane Rectangular 13').addTo(map)
+            L.marker([26,142.0]).bindPopup('Japan Plane Rectangular 14').addTo(map)
+            L.marker([26,127.5]).bindPopup('Japan Plane Rectangular 15').addTo(map)
+            L.marker([26,124.0]).bindPopup('Japan Plane Rectangular 16').addTo(map)
+            L.marker([26,131.0]).bindPopup('Japan Plane Rectangular 17').addTo(map)
+            L.marker([20,136.0]).bindPopup('Japan Plane Rectangular 18').addTo(map)
+            L.marker([26,154.0]).bindPopup('Japan Plane Rectangular 19').addTo(map)
+
+
+
 
         </script>
     </body>
