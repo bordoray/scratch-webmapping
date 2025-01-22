@@ -62,7 +62,16 @@
                 .addTo(map);
             });
 
+            const geojson = {
+        "type": "FeatureCollection",
+        "features": [
+        { "type": "Feature", "properties": { "name": "JPR1"}, "geometry": { "type": "Point", "coordinates": [ 129.5, 33 ] } },
+        { "type": "Feature", "properties": { "name": "JPR2"}, "geometry": { "type": "Point", "coordinates": [ 131.0, 33 ] } },
+           ]}
 
+            L.geoJSON(geojson)
+            .bindPopup((layer) => layer.feature.properties.name)
+            .addTo(map);
 
 
         </script>
