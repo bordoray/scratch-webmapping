@@ -52,6 +52,16 @@
             L.marker([20,136.0]).bindPopup('Japan Plane Rectangular 18').addTo(map)
             L.marker([26,154.0]).bindPopup('Japan Plane Rectangular 19').addTo(map)
 
+            // 4-2-4 Schools geojson
+            fetch('./P29-21_09.geojson') //schools data of Tochigi prefecture
+            .then((res) => res.json())
+            .then((json) => {
+                // create a geojson layer
+                L.geoJSON(json)
+                .bindPopup((layer) => layer.feature.properties.P29_004)
+                .addTo(map);
+            });
+
 
 
 
